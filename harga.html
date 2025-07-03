@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strategi Penetapan Harga Bakso yang Kompetitif</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@700;800&display=swap"
+        rel="stylesheet">
+        <link rel="shortcut icon" href="Image/bento_bg.png">
+    <style>
+        :root {
+            --primary: #27ae60;
+            --primary-dark: #219653;
+            --secondary: #2c3e50;
+            --light: #f9f9f9;
+            --gray: #ecf0f1;
+            --accent: #e67e22;
+            --shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: var(--light);
+            overflow-x: hidden;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, var(--secondary) 0%, var(--primary) 100%);
+            color: white;
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: var(--shadow);
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            font-size: 1.8rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo i {
+            color: var(--accent);
+            margin-right: 10px;
+        }
+
+        .mobile-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav li {
+            margin-left: 25px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        nav a:hover {
+            color: var(--accent);
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--accent);
+            transition: var(--transition);
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(44, 62, 80, 0.8), rgba(44, 62, 80, 0.9)), url('https://images.unsplash.com/photo-1563245372-f21724e3856d?ixlib=rb-4.0.3') no-repeat center center/cover;
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><polygon fill="rgba(39, 174, 96, 0.1)" points="0,0 100,100 0,100"/></svg>');
+            background-size: cover;
+            z-index: 0;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 3.2rem;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            box-shadow: 0 4px 15px rgba(39, 174, 96, 0.4);
+        }
+
+        .btn:hover {
+            background: var(--primary-dark);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(39, 174, 96, 0.5);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid white;
+            margin-left: 15px;
+        }
+
+        .btn-outline:hover {
+            background: white;
+            color: var(--secondary);
+        }
+
+        /* Section Styles */
+        section {
+            padding: 80px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-header h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.5rem;
+            color: var(--secondary);
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-header h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--primary);
+            border-radius: 2px;
+        }
+
+        .section-header p {
+            max-width: 700px;
+            margin: 20px auto 0;
+            color: #666;
+        }
+
+        /* Card Styles */
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            transform: translateY(0);
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+        }
+
+        .card-header {
+            background: var(--primary);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .card-header h3 {
+            font-size: 1.5rem;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .card-header h3 i {
+            margin-right: 10px;
+        }
+
+        .card-body {
+            padding: 25px;
+            flex-grow: 1;
+        }
+
+        .card-body ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .card-body li {
+            padding: 10px 0;
+            border-bottom: 1px solid var(--gray);
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .card-body li:last-child {
+            border-bottom: none;
+        }
+
+        .card-body li i {
+            color: var(--primary);
+            margin-right: 10px;
+            min-width: 20px;
+            margin-top: 4px;
+        }
+
+        .highlight {
+            background: linear-gradient(120deg, rgba(39, 174, 96, 0.1), transparent);
+            border-left: 4px solid var(--primary);
+            padding: 15px 20px;
+            margin: 25px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .value-section {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .value-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .value-content h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+        }
+
+        .value-content p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .quote {
+            font-size: 1.4rem;
+            font-style: italic;
+            margin: 40px 0;
+            padding: 0 20px;
+            position: relative;
+        }
+
+        .quote::before,
+        .quote::after {
+            content: '"';
+            font-size: 3rem;
+            color: var(--accent);
+            position: absolute;
+            opacity: 0.3;
+        }
+
+        .quote::before {
+            top: -20px;
+            left: 0;
+        }
+
+        .quote::after {
+            bottom: -40px;
+            right: 0;
+        }
+
+        .contact-person {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 15px;
+            max-width: 500px;
+            margin: 40px auto 0;
+        }
+
+        .person-avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: var(--accent);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 20px;
+            font-size: 2rem;
+            color: white;
+        }
+
+        .person-info h4 {
+            font-size: 1.4rem;
+            margin-bottom: 5px;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--secondary);
+            color: white;
+            padding: 60px 0 30px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-column h3 {
+            font-size: 1.4rem;
+            margin-bottom: 20px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .footer-column h3::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: var(--primary);
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            color: #ddd;
+            text-decoration: none;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+        }
+
+        .footer-links a i {
+            margin-right: 10px;
+            color: var(--primary);
+            width: 20px;
+        }
+
+        .footer-links a:hover {
+            color: var(--primary);
+            transform: translateX(5px);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            animation: fadeIn 0.8s ease forwards;
+        }
+
+        .delay-1 {
+            animation-delay: 0.1s;
+        }
+
+        .delay-2 {
+            animation-delay: 0.2s;
+        }
+
+        .delay-3 {
+            animation-delay: 0.3s;
+        }
+
+        .delay-4 {
+            animation-delay: 0.4s;
+        }
+
+        .delay-5 {
+            animation-delay: 0.5s;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .mobile-toggle {
+                display: block;
+            }
+
+            nav {
+                position: fixed;
+                top: 70px;
+                left: -100%;
+                width: 80%;
+                height: calc(100vh - 70px);
+                background: var(--secondary);
+                transition: var(--transition);
+                padding: 20px;
+            }
+
+            nav.active {
+                left: 0;
+            }
+
+            nav ul {
+                flex-direction: column;
+            }
+
+            nav li {
+                margin: 15px 0;
+            }
+
+            .hero {
+                padding: 80px 0;
+            }
+
+            .hero h1 {
+                font-size: 2.4rem;
+            }
+
+            .btn {
+                display: block;
+                margin: 15px auto;
+                width: 80%;
+                max-width: 300px;
+            }
+
+            .btn-outline {
+                margin-left: 0;
+            }
+
+            .section-header h2 {
+                font-size: 2rem;
+            }
+
+            section {
+                padding: 60px 0;
+            }
+
+            .contact-person {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .person-avatar {
+                margin-right: 0;
+                margin-bottom: 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .section-header h2 {
+                font-size: 1.8rem;
+            }
+
+            .quote {
+                font-size: 1.2rem;
+            }
+        }
+        .penanggung-jawab {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 8px 15px;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            margin-left: 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        .penanggung-jawab i {
+            margin-right: 8px;
+            color: var(--accent);
+        }
+
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <i class="fas fa-utensils"></i>
+                BaksoStrategi
+            </div>
+
+            <div class="penanggung-jawab">
+                <i class="fas fa-user-tie"></i>
+                <strong>Penanggung Jawab: Irfan</strong>
+            </div>
+
+            <button class="mobile-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav>
+                <ul>
+                    <li><a href="#strategi"><i class="fas fa-chess"></i> Strategi Harga</a></li>
+                    <li><a href="#analisis"><i class="fas fa-calculator"></i> Analisis Biaya</a></li>
+                    <li><a href="#segmentasi"><i class="fas fa-chart-pie"></i> Segmentasi</a></li>
+                    <li><a href="#promosi"><i class="fas fa-tags"></i> Promosi</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Strategi Penetapan Harga Bakso yang Kompetitif</h1>
+                <p>Optimalkan Keuntungan dengan Pendekatan Harga yang Tepat untuk Bisnis Bakso Anda</p>
+                <a href="#strategi" class="btn">Pelajari Strategi</a>
+                <a href="#contact" class="btn btn-outline">Konsultasi Gratis</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Strategi Section -->
+    <section id="strategi">
+        <div class="container">
+            <div class="section-header">
+                <h2>Strategi Penetapan Harga</h2>
+                <p>Tips jualan bakso supaya laris dengan penetapan harga yang tepat</p>
+            </div>
+
+            <div class="highlight">
+                <p>Penetapan harga yang tepat merupakan salah satu tips jualan bakso supaya laris yang sering diabaikan.
+                    Harga yang terlalu tinggi dapat mengusir pelanggan potensial, sementara harga yang terlalu rendah
+                    bisa mengurangi keuntungan dan memberi kesan kualitas rendah.</p>
+            </div>
+
+            <div class="cards">
+                <div class="card fade-in">
+                    <div class="card-header">
+                        <h3><i class="fas fa-calculator"></i> Analisis Biaya</h3>
+                    </div>
+                    <div class="card-body">
+                        <ul>
+                            <li><i class="fas fa-check-circle"></i> Hitung semua biaya produksi secara cermat</li>
+                            <li><i class="fas fa-check-circle"></i> Termasuk bahan baku, tenaga kerja, dan overhead</li>
+                            <li><i class="fas fa-check-circle"></i> Pastikan harga menutupi semua biaya dan memberikan
+                                keuntungan</li>
+                            <li><i class="fas fa-check-circle"></i> Gunakan rumus: Harga Jual = Biaya Produksi + Margin
+                                Keuntungan</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card fade-in delay-1">
+                    <div class="card-header">
+                        <h3><i class="fas fa-chart-line"></i> Riset Pasar</h3>
+                    </div>
+                    <div class="card-body">
+                        <ul>
+                            <li><i class="fas fa-check-circle"></i> Pelajari harga pesaing di sekitar lokasi Anda</li>
+                            <li><i class="fas fa-check-circle"></i> Identifikasi kisaran harga yang diterima pasar</li>
+                            <li><i class="fas fa-check-circle"></i> Bandingkan kualitas dan porsi dengan kompetitor</li>
+                            <li><i class="fas fa-check-circle"></i> Sesuaikan harga dengan nilai yang ditawarkan</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card fade-in delay-2">
+                    <div class="card-header">
+                        <h3><i class="fas fa-arrows-alt-h"></i> Evaluasi Berkala</h3>
+                    </div>
+                    <div class="card-body">
+                        <ul>
+                            <li><i class="fas fa-check-circle"></i> Lakukan evaluasi strategi harga secara berkala</li>
+                            <li><i class="fas fa-check-circle"></i> Sesuaikan harga jika terjadi perubahan biaya bahan
+                                baku</li>
+                            <li><i class="fas fa-check-circle"></i> Komunikasikan perubahan harga dengan baik ke
+                                pelanggan</li>
+                            <li><i class="fas fa-check-circle"></i> Pantau reaksi pelanggan terhadap perubahan harga
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Segmentasi Section -->
+    <section id="segmentasi" style="background-color: var(--gray);">
+        <div class="container">
+            <div class="section-header">
+                <h2>Segmentasi Harga & Paket Hemat</h2>
+                <p>Strategi untuk menawarkan nilai lebih kepada pelanggan</p>
+            </div>
+
+            <div class="cards">
+                <div class="card fade-in">
+                    <div class="card-header" style="background-color: var(--accent);">
+                        <h3><i class="fas fa-layer-group"></i> Segmentasi Harga</h3>
+                    </div>
+                    <div class="card-body">
+                        <ul>
+                            <li><i class="fas fa-star"></i> Tawarkan variasi harga untuk berbagai jenis bakso</li>
+                            <li><i class="fas fa-star"></i> Bedakan harga berdasarkan ukuran porsi (kecil, sedang,
+                                besar)</li>
+                            <li><i class="fas fa-star"></i> Harga khusus untuk menu premium (bakso urat, bakso telur)
+                            </li>
+                            <li><i class="fas fa-star"></i> Buat paket keluarga dengan harga spesial</li>
+                        </ul>
+                        <div class="highlight" style="margin-top: 20px;">
+                            <p><strong>Contoh Segmentasi:</strong> Bakso Biasa (15k), Bakso Spesial (20k), Bakso Super
+                                (25k), Paket Keluarga (70k untuk 4 porsi)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card fade-in delay-1">
+                    <div class="card-header" style="background-color: var(--accent);">
+                        <h3><i class="fas fa-gift"></i> Paket Hemat</h3>
+                    </div>
+                    <div class="card-body">
+                        <ul>
+                            <li><i class="fas fa-lightbulb"></i> Buat paket kombinasi yang menawarkan nilai lebih</li>
+                            <li><i class="fas fa-lightbulb"></i> Contoh: Bakso + Es Teh, Bakso + Kerupuk</li>
+                            <li><i class="fas fa-lightbulb"></i> Tawarkan paket makan siang untuk pekerja</li>
+                            <li><i class="fas fa-lightbulb"></i> Sediakan paket "Nasi Bakso Double" dengan harga lebih
+                                murah</li>
+                        </ul>
+                        <div class="highlight" style="margin-top: 20px;">
+                            <p><strong>Contoh Paket:</strong> Paket Hemat: Bakso + Es Teh (20k), Paket Komplit: Bakso +
+                                Es Teh + Kerupuk (23k), Paket Keluarga: 4 Bakso + 4 Es Teh (75k)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card fade-in delay-2">
+                    <div class="card-header" style="background-color: var(--accent);">
+                        <h3><i class="fas fa-percent"></i> Diskon & Promosi</h3>
+                    </div>
+                    <div class="card-body">
+                        <ul>
+                            <li><i class="fas fa-bullhorn"></i> Gunakan diskon strategis untuk menarik pelanggan baru
+                            </li>
+                            <li><i class="fas fa-bullhorn"></i> Tawarkan promo "Beli 5 Gratis 1" untuk loyalitas</li>
+                            <li><i class="fas fa-bullhorn"></i> Buat promo waktu tertentu (contoh: jam 14.00-16.00)</li>
+                            <li><i class="fas fa-bullhorn"></i> Promo hari spesial (ulang tahun pelanggan, hari
+                                kemerdekaan)</li>
+                        </ul>
+                        <div class="highlight" style="margin-top: 20px;">
+                            <p><strong>Tips:</strong> Diskonting tidak lebih dari 20% untuk menjaga kualitas persepsi
+                                produk</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Value Section -->
+    <section class="value-section" id="contact">
+        <div class="container">
+            <div class="value-content">
+                <h2>Fokus pada Nilai, Bukan Harga</h2>
+                <div class="quote">
+                    Ingatlah bahwa nilai tidak selalu berarti harga terendah. Jika Anda menawarkan kualitas yang lebih
+                    baik atau pengalaman yang unik, pelanggan mungkin bersedia membayar sedikit lebih mahal. Fokus pada
+                    memberikan nilai terbaik untuk harga yang Anda tetapkan.
+                </div>
+                <p>Strategi penetapan harga yang tepat akan membantu Anda menciptakan bisnis bakso yang menguntungkan
+                    dan berkelanjutan.</p>
+
+                <div class="contact-person">
+                    <div class="person-avatar">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="person-info">
+                        <h4>Penanggung Jawab: Irfan</h4>
+                        <p>Konsultan Bisnis Kuliner</p>
+                        <p>irfan@bakso-strategi.com | +62 812 3456 7890</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>BaksoStrategi</h3>
+                    <p>Platform strategi bisnis bakso untuk membantu Anda mengoptimalkan penetapan harga dan
+                        meningkatkan keuntungan.</p>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Layanan Kami</h3>
+                    <ul class="footer-links">
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Konsultasi Bisnis Bakso</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Analisis Harga Kompetitif</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Pelatihan Pengusaha Kuliner</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Riset Pasar Lokal</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Kontak Kami</h3>
+                    <ul class="footer-links">
+                        <li><a href="#"><i class="fas fa-map-marker-alt"></i> Jl. Bakso No. 456, Jakarta</a></li>
+                        <li><a href="#"><i class="fas fa-phone"></i> +62 812 3456 7890</a></li>
+                        <li><a href="#"><i class="fas fa-envelope"></i> info@baksostrategi.com</a></li>
+                        <li><a href="#"><i class="fab fa-instagram"></i> @baksostrategi</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="copyright">
+                <p>&copy; 2025 BaksoStrategi.com - All Rights Reserved. Strategi untuk sukses bisnis bakso Anda</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Navigation Toggle
+        const mobileToggle = document.querySelector('.mobile-toggle');
+        const nav = document.querySelector('nav');
+
+        mobileToggle.addEventListener('click', () => {
+            nav.classList.toggle('active');
+        });
+
+        // Smooth Scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                nav.classList.remove('active');
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Header Shadow on Scroll
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.15)';
+            } else {
+                header.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.08)';
+            }
+        });
+
+        // Animation on Scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+        document.querySelectorAll('.card').forEach(card => {
+            observer.observe(card);
+        });
+    </script>
+</body>
+
+</html>

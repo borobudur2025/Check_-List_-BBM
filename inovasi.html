@@ -1,0 +1,1045 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inovasi Menu Bakso & Packaging Modern</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@700;800&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --primary: #e67e22;
+            --primary-dark: #d35400;
+            --secondary: #2c3e50;
+            --light: #f9f9f9;
+            --gray: #ecf0f1;
+            --accent: #27ae60;
+            --eco: #2ecc71;
+            --shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: var(--light);
+            overflow-x: hidden;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, var(--secondary) 0%, var(--primary) 100%);
+            color: white;
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: var(--shadow);
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            font-size: 1.8rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo i {
+            color: var(--accent);
+            margin-right: 10px;
+        }
+
+        .penanggung-jawab {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 8px 15px;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            margin-left: 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        .penanggung-jawab i {
+            margin-right: 8px;
+            color: var(--accent);
+        }
+
+        .mobile-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav li {
+            margin-left: 25px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        nav a:hover {
+            color: var(--accent);
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--accent);
+            transition: var(--transition);
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(44, 62, 80, 0.8), rgba(44, 62, 80, 0.9)), url('https://images.unsplash.com/photo-1563245372-f21724e3856d?ixlib=rb-4.0.3') no-repeat center center/cover;
+            color: white;
+            padding: 120px 0;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><polygon fill="rgba(230, 126, 34, 0.1)" points="0,0 100,100 0,100"/></svg>');
+            background-size: cover;
+            z-index: 0;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            box-shadow: 0 4px 15px rgba(230, 126, 34, 0.4);
+        }
+
+        .btn:hover {
+            background: var(--primary-dark);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(230, 126, 34, 0.5);
+        }
+
+        /* Section Styles */
+        section {
+            padding: 80px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-header h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.5rem;
+            color: var(--secondary);
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-header h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--primary);
+            border-radius: 2px;
+        }
+
+        .section-header p {
+            max-width: 700px;
+            margin: 20px auto 0;
+            color: #666;
+        }
+
+        /* Card Styles */
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            transform: translateY(0);
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+        }
+
+        .card-header {
+            background: var(--primary);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .card-header h3 {
+            font-size: 1.5rem;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .card-header h3 i {
+            margin-right: 10px;
+        }
+
+        .card-body {
+            padding: 25px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-body p {
+            margin-bottom: 15px;
+        }
+
+        .highlight {
+            background: linear-gradient(120deg, rgba(230, 126, 34, 0.1), transparent);
+            border-left: 4px solid var(--primary);
+            padding: 15px 20px;
+            margin: 15px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .innovation-points {
+            margin-top: 15px;
+        }
+
+        .innovation-points li {
+            display: flex;
+            align-items: flex-start;
+            padding: 8px 0;
+        }
+
+        .innovation-points li i {
+            color: var(--primary);
+            margin-right: 10px;
+            min-width: 20px;
+            margin-top: 4px;
+        }
+
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .menu-item {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .menu-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .menu-image {
+            height: 180px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .menu-label {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: var(--eco);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 30px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .menu-info {
+            padding: 20px;
+        }
+
+        .menu-info h3 {
+            color: var(--secondary);
+            margin-bottom: 10px;
+        }
+
+        .packaging-section {
+            background: linear-gradient(135deg, var(--secondary) 0%, var(--primary) 100%);
+            color: white;
+            padding: 80px 0;
+        }
+
+        .packaging-content {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .packaging-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .packaging-item {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 25px;
+            transition: var(--transition);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .packaging-item:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-5px);
+        }
+
+        .packaging-item i {
+            font-size: 2.5rem;
+            color: var(--accent);
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .packaging-item h3 {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+        }
+
+        /* Quality Section */
+        .quality-section {
+            background-color: #f8f9fa;
+            padding: 80px 0;
+        }
+
+        .quality-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .quality-item {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .quality-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .quality-item i {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .quality-item h3 {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            color: var(--secondary);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--secondary);
+            color: white;
+            padding: 60px 0 30px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-column h3 {
+            font-size: 1.4rem;
+            margin-bottom: 20px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .footer-column h3::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: var(--primary);
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            color: #ddd;
+            text-decoration: none;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+        }
+
+        .footer-links a i {
+            margin-right: 10px;
+            color: var(--primary);
+            width: 20px;
+        }
+
+        .footer-links a:hover {
+            color: var(--primary);
+            transform: translateX(5px);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            animation: fadeIn 0.8s ease forwards;
+        }
+
+        .delay-1 {
+            animation-delay: 0.1s;
+        }
+
+        .delay-2 {
+            animation-delay: 0.2s;
+        }
+
+        .delay-3 {
+            animation-delay: 0.3s;
+        }
+
+        .delay-4 {
+            animation-delay: 0.4s;
+        }
+
+        .delay-5 {
+            animation-delay: 0.5s;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .hero h1 {
+                font-size: 3rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .mobile-toggle {
+                display: block;
+            }
+
+            .penanggung-jawab {
+                display: none;
+            }
+
+            nav {
+                position: fixed;
+                top: 70px;
+                left: -100%;
+                width: 80%;
+                height: calc(100vh - 70px);
+                background: var(--secondary);
+                transition: var(--transition);
+                padding: 20px;
+            }
+
+            nav.active {
+                left: 0;
+            }
+
+            nav ul {
+                flex-direction: column;
+            }
+
+            nav li {
+                margin: 15px 0;
+            }
+
+            .hero {
+                padding: 90px 0;
+            }
+
+            .hero h1 {
+                font-size: 2.4rem;
+            }
+
+            .section-header h2 {
+                font-size: 2rem;
+            }
+
+            section {
+                padding: 60px 0;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .section-header h2 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header dengan Penanggung Jawab -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <i class="fas fa-lightbulb"></i>
+                BaksoInovasi
+            </div>
+
+            <!-- Penanggung Jawab -->
+            <div class="penanggung-jawab">
+                <i class="fas fa-user-tie"></i>
+                <strong>Penanggung Jawab: Dedi Suprapto & Erry</strong>
+            </div>
+
+            <button class="mobile-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav>
+                <ul>
+                    <li><a href="#inovasi-menu"><i class="fas fa-utensils"></i> Inovasi Menu</a></li>
+                    <li><a href="#packaging"><i class="fas fa-box-open"></i> Packaging</a></li>
+                    <li><a href="#kualitas"><i class="fas fa-star"></i> Kualitas Rasa</a></li>
+                    <li><a href="#strategi"><i class="fas fa-lightbulb"></i> Tips Strategis</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Inovasi Menu & Packaging Bakso</h1>
+                <p>Strategi untuk menarik pelanggan baru dan mempertahankan pelanggan lama</p>
+                <a href="#inovasi-menu" class="btn">Temukan Ide Kreatif</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Inovasi Menu Section -->
+    <section id="inovasi-menu">
+        <div class="container">
+            <div class="section-header">
+                <h2>Inovasi Menu dan Variasi Produk</h2>
+                <p>Meskipun bakso tradisional selalu memiliki tempat di hati pelanggan, inovasi menu dapat menjadi salah
+                    satu tips jualan bakso supaya laris yang efektif</p>
+            </div>
+
+            <div class="highlight">
+                <p>Dalam melakukan inovasi, penting untuk tetap memperhatikan selera pasar dan tidak terlalu jauh
+                    menyimpang dari konsep dasar bakso. Lakukan uji coba terbatas sebelum memasukkan menu baru ke dalam
+                    daftar reguler.</p>
+            </div>
+
+            <div class="cards">
+                <div class="card fade-in">
+                    <div class="card-header">
+                        <h3><i class="fas fa-seedling"></i> Ide Inovasi Menu</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="innovation-points">
+                            <ul>
+                                <li><i class="fas fa-check-circle"></i> Bakso dengan isian unik (keju, jamur, telur
+                                    puyuh)</li>
+                                <li><i class="fas fa-check-circle"></i> Bakso dengan bahan dasar alternatif (ayam, ikan,
+                                    udang)</li>
+                                <li><i class="fas fa-check-circle"></i> Bakso sehat (rendah lemak, tinggi protein)</li>
+                                <li><i class="fas fa-check-circle"></i> Bakso dengan kuah spesial (soto, tom yam, kari)
+                                </li>
+                                <li><i class="fas fa-check-circle"></i> Bakso mini untuk camilan</li>
+                                <li><i class="fas fa-check-circle"></i> Bakso pedas level</li>
+                                <li><i class="fas fa-check-circle"></i> Bakso vegetarian</li>
+                            </ul>
+                        </div>
+                        <div class="highlight">
+                            <p><i class="fas fa-exclamation-circle"></i> <strong>Presentasi:</strong> Tampilan yang
+                                menarik dapat meningkatkan daya tarik produk Anda.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card fade-in delay-1">
+                    <div class="card-header">
+                        <h3><i class="fas fa-sync-alt"></i> Pembaruan Menu Berkala</h3>
+                    </div>
+                    <div class="card-body">
+                        <p>Jangan lupa untuk secara berkala memperbarui menu Anda. Ini bisa dilakukan dengan:</p>
+                        <div class="innovation-points">
+                            <ul>
+                                <li><i class="fas fa-calendar-alt"></i> Menu musiman (bakso hangat di musim hujan)</li>
+                                <li><i class="fas fa-star"></i> Edisi terbatas (kolaborasi dengan brand lain)</li>
+                                <li><i class="fas fa-trophy"></i> Menu pemenang kontes inovasi</li>
+                                <li><i class="fas fa-heart"></i> Menu berdasarkan hari spesial (Valentine, Hari Ibu)
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="highlight">
+                            <p><i class="fas fa-lightbulb"></i> <strong>Tips:</strong> Lakukan uji coba terbatas sebelum
+                                meluncurkan menu baru secara permanen.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-header" style="margin-top: 80px; margin-bottom: 40px;">
+                <h3>Contoh Menu Inovatif</h3>
+                <p>Inspirasi variasi produk bakso yang bisa Anda coba</p>
+            </div>
+
+            <div class="menu-grid">
+                <div class="menu-item fade-in">
+                    <div class="menu-image"
+                        style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1588315029754-2dd089d39a1a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');">
+                        <div class="menu-label">BEST SELLER</div>
+                    </div>
+                    <div class="menu-info">
+                        <h3>Bakso Keju Melt</h3>
+                        <p>Bakso sapi premium dengan isian keju mozzarella yang lumer</p>
+                    </div>
+                </div>
+
+                <div class="menu-item fade-in delay-1">
+                    <div class="menu-image"
+                        style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1617196034796-73dfa7b1fd56?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');">
+                        <div class="menu-label">HEALTHY</div>
+                    </div>
+                    <div class="menu-info">
+                        <h3>Bakso Ikan Tenggiri</h3>
+                        <p>Bakso ikan rendah lemak dengan kuah bening ala seafood</p>
+                    </div>
+                </div>
+
+                <div class="menu-item fade-in delay-2">
+                    <div class="menu-image"
+                        style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1613514785940-daed07799d9b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');">
+                        <div class="menu-label">SPICY</div>
+                    </div>
+                    <div class="menu-info">
+                        <h3>Bakso Setan Level 10</h3>
+                        <p>Bakso ekstra pedas dengan cabai rawit pilihan</p>
+                    </div>
+                </div>
+
+                <div class="menu-item fade-in delay-3">
+                    <div class="menu-image"
+                        style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1634034379073-f689b460a3fc?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');">
+                        <div class="menu-label">VEGAN</div>
+                    </div>
+                    <div class="menu-info">
+                        <h3>Bakso Jamur Shitake</h3>
+                        <p>Bakso vegetarian berbahan dasar jamur dan tahu</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Packaging Section -->
+    <section id="packaging" class="packaging-section">
+        <div class="container">
+            <div class="section-header" style="color: white;">
+                <h2>Inovasi dalam Penyajian dan Packaging</h2>
+                <p>Inovasi dalam penyajian dan packaging bisa menjadi salah satu tips jualan bakso supaya laris yang
+                    efektif</p>
+            </div>
+
+            <div class="highlight" style="background: rgba(255,255,255,0.1); border-left: 4px solid var(--accent);">
+                <p>Presentasi yang menarik tidak hanya meningkatkan daya tarik visual produk Anda, tetapi juga dapat
+                    meningkatkan persepsi nilai di mata pelanggan.</p>
+            </div>
+
+            <div class="packaging-grid">
+                <div class="packaging-item fade-in">
+                    <i class="fas fa-bowl-food"></i>
+                    <h3>Desain Mangkuk Unik</h3>
+                    <p>Gunakan mangkuk atau piring dengan desain yang menarik dan sesuai dengan brand Anda. Bentuk dan
+                        warna yang unik akan meningkatkan pengalaman makan pelanggan.</p>
+                </div>
+
+                <div class="packaging-item fade-in delay-1">
+                    <i class="fas fa-leaf"></i>
+                    <h3>Packaging Ramah Lingkungan</h3>
+                    <p>Pertimbangkan untuk menggunakan bahan packaging yang biodegradable untuk menunjukkan kepedulian
+                        terhadap lingkungan. Kemasan dari daun atau kertas daur ulang bisa menjadi pilihan.</p>
+                </div>
+
+                <div class="packaging-item fade-in delay-2">
+                    <i class="fas fa-signature"></i>
+                    <h3>Personalisasi</h3>
+                    <p>Tambahkan elemen personalisasi pada packaging, seperti stiker dengan nama pelanggan untuk pesanan
+                        online. Hal ini membuat pelanggan merasa spesial.</p>
+                </div>
+
+                <div class="packaging-item fade-in delay-3">
+                    <i class="fas fa-info-circle"></i>
+                    <h3>Informasi Nutrisi</h3>
+                    <p>Sertakan informasi nutrisi pada packaging untuk pelanggan yang peduli kesehatan. Tampilkan
+                        kalori, protein, dan informasi alergen dengan jelas.</p>
+                </div>
+
+                <div class="packaging-item fade-in delay-4">
+                    <i class="fas fa-box"></i>
+                    <h3>Packaging Fungsional</h3>
+                    <p>Desain packaging yang tidak hanya menarik tapi juga fungsional, misalnya mudah dibawa atau bisa
+                        dipanaskan langsung. Pertimbangkan kompartemen terpisah untuk kuah dan bakso.</p>
+                </div>
+
+                <div class="packaging-item fade-in delay-5">
+                    <i class="fas fa-palette"></i>
+                    <h3>Dekorasi Penyajian</h3>
+                    <p>Untuk penyajian di tempat, gunakan elemen dekorasi seperti daun pisang sebagai alas atau taburan
+                        bawang goreng yang ditata dengan artistik. Konsistensi penting untuk identitas visual.</p>
+                </div>
+            </div>
+
+            <div class="highlight"
+                style="margin-top: 40px; background: rgba(255,255,255,0.1); border-left: 4px solid var(--accent);">
+                <p><i class="fas fa-exclamation-triangle"></i> <strong>Pertimbangan Praktis:</strong> Pastikan packaging
+                    dapat menjaga suhu dan kualitas bakso selama perjalanan, terutama untuk layanan delivery.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kualitas Rasa Section -->
+    <section id="kualitas" class="quality-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Menjaga Kualitas dan Konsistensi Rasa</h2>
+                <p>Dalam dunia kuliner, rasa adalah raja. Salah satu tips jualan bakso supaya laris yang paling krusial
+                    adalah menjaga kualitas dan konsistensi rasa bakso Anda.</p>
+            </div>
+
+            <div class="highlight">
+                <p>Pelanggan yang puas dengan rasa bakso Anda cenderung akan kembali dan bahkan merekomendasikan kepada
+                    orang lain. Berikut beberapa cara untuk memastikan kualitas bakso Anda tetap prima:</p>
+            </div>
+
+            <div class="quality-grid">
+                <div class="quality-item fade-in">
+                    <i class="fas fa-award"></i>
+                    <h3>Pilih Bahan Baku Berkualitas</h3>
+                    <p>Gunakan daging segar dan berkualitas tinggi untuk membuat bakso. Kualitas bahan baku akan
+                        menentukan hasil akhir rasa bakso Anda.</p>
+                </div>
+
+                <div class="quality-item fade-in delay-1">
+                    <i class="fas fa-clipboard-list"></i>
+                    <h3>Standarisasi Resep</h3>
+                    <p>Buat resep yang terstandar dan pastikan setiap batch bakso dibuat dengan komposisi yang sama
+                        untuk menjaga konsistensi rasa.</p>
+                </div>
+
+                <div class="quality-item fade-in delay-2">
+                    <i class="fas fa-check-double"></i>
+                    <h3>Kontrol Kualitas</h3>
+                    <p>Lakukan pengecekan rutin terhadap rasa, tekstur, dan penampilan bakso sebelum disajikan kepada
+                        pelanggan.</p>
+                </div>
+
+                <div class="quality-item fade-in delay-3">
+                    <i class="fas fa-temperature-low"></i>
+                    <h3>Penyimpanan yang Tepat</h3>
+                    <p>Simpan bahan baku dan bakso jadi dengan metode yang benar untuk menjaga kesegarannya dan mencegah
+                        kontaminasi.</p>
+                </div>
+
+                <div class="quality-item fade-in delay-4">
+                    <i class="fas fa-users"></i>
+                    <h3>Pelatihan Karyawan</h3>
+                    <p>Pastikan semua karyawan memahami standar kualitas dan cara pembuatan bakso yang benar untuk
+                        menjaga konsistensi.</p>
+                </div>
+
+                <div class="quality-item fade-in delay-5">
+                    <i class="fas fa-comment-dots"></i>
+                    <h3>Umpan Balik Pelanggan</h3>
+                    <p>Jangan takut untuk meminta umpan balik dari pelanggan. Kritik dan saran dari mereka dapat menjadi
+                        masukan berharga untuk terus meningkatkan kualitas produk Anda.</p>
+                </div>
+            </div>
+
+            <div class="highlight" style="margin-top: 40px;">
+                <p><i class="fas fa-exclamation-circle"></i> <strong>Ingat:</strong> Mempertahankan kualitas lebih mudah
+                    daripada mencoba mengembalikan kepercayaan pelanggan yang kecewa. Konsistensi adalah kunci
+                    kesuksesan bisnis kuliner.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Strategi Section -->
+    <section id="strategi">
+        <div class="container">
+            <div class="section-header">
+                <h2>Strategi Implementasi Inovasi</h2>
+                <p>Tips untuk menerapkan inovasi menu dan packaging secara efektif</p>
+            </div>
+
+            <div class="cards">
+                <div class="card">
+                    <div class="card-header">
+                        <h3><i class="fas fa-flask"></i> Tahap Uji Coba</h3>
+                    </div>
+                    <div class="card-body">
+                        <ul class="innovation-points">
+                            <li><i class="fas fa-check"></i> Lakukan uji coba terbatas dengan pelanggan setia</li>
+                            <li><i class="fas fa-check"></i> Sediakan formulir feedback sederhana</li>
+                            <li><i class="fas fa-check"></i> Uji berbagai varian dalam porsi kecil</li>
+                            <li><i class="fas fa-check"></i> Analisis respon sebelum peluncuran resmi</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <h3><i class="fas fa-bullhorn"></i> Strategi Peluncuran</h3>
+                    </div>
+                    <div class="card-body">
+                        <ul class="innovation-points">
+                            <li><i class="fas fa-check"></i> Buat peluncuran menu baru sebagai event khusus</li>
+                            <li><i class="fas fa-check"></i> Tawarkan promo "coba menu baru"</li>
+                            <li><i class="fas fa-check"></i> Manfaatkan media sosial untuk teaser</li>
+                            <li><i class="fas fa-check"></i> Kolaborasi dengan food vlogger</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <h3><i class="fas fa-chart-line"></i> Evaluasi Berkala</h3>
+                    </div>
+                    <div class="card-body">
+                        <ul class="innovation-points">
+                            <li><i class="fas fa-check"></i> Pantau penjualan menu baru setiap minggu</li>
+                            <li><i class="fas fa-check"></i> Kumpulkan feedback secara berkala</li>
+                            <li><i class="fas fa-check"></i> Lakukan perbaikan berdasarkan masukan</li>
+                            <li><i class="fas fa-check"></i> Putuskan untuk tetap pertahankan atau ganti menu</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>BaksoInovasi</h3>
+                    <p>Platform inovasi menu dan packaging untuk bisnis bakso yang lebih menarik dan menguntungkan.</p>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Layanan Kami</h3>
+                    <ul class="footer-links">
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Konsultasi Menu</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Desain Packaging</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Pelatihan Inovasi</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Riset Pasar</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Kontak Kami</h3>
+                    <ul class="footer-links">
+                        <li><a href="#"><i class="fas fa-map-marker-alt"></i> Jl. Bakso No. 789, Jakarta</a></li>
+                        <li><a href="#"><i class="fas fa-phone"></i> +62 812 3456 7890</a></li>
+                        <li><a href="#"><i class="fas fa-envelope"></i> info@baksoinovasi.id</a></li>
+                        <li><a href="#"><i class="fab fa-instagram"></i> @baksoinovasi</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="copyright">
+                <p>&copy; 2025 BaksoInovasi.id - All Rights Reserved. Membantu bisnis bakso Anda terus berinovasi</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Navigation Toggle
+        const mobileToggle = document.querySelector('.mobile-toggle');
+        const nav = document.querySelector('nav');
+
+        mobileToggle.addEventListener('click', () => {
+            nav.classList.toggle('active');
+        });
+
+        // Smooth Scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                nav.classList.remove('active');
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Header Shadow on Scroll
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.15)';
+            } else {
+                header.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.08)';
+            }
+        });
+
+        // Animation on Scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+        document.querySelectorAll('.card, .menu-item, .packaging-item, .quality-item').forEach(element => {
+            observer.observe(element);
+        });
+    </script>
+</body>
+
+</html>

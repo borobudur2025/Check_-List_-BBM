@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Branding Bakso Modern - Rizal & Farhan</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Montserrat:wght@700;800;900&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --primary: #e74c3c;
+            --primary-light: #ff6b5d;
+            --primary-dark: #c0392b;
+            --secondary: #2c3e50;
+            --accent: #f39c12;
+            --light: #f9f9f9;
+            --gray: #ecf0f1;
+            --dark: #1a1a1a;
+            --success: #27ae60;
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.7;
+            color: var(--dark);
+            background-color: var(--light);
+            overflow-x: hidden;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, var(--secondary) 0%, var(--primary) 100%);
+            color: white;
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: var(--shadow);
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            font-size: 1.8rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo i {
+            color: var(--accent);
+            margin-right: 10px;
+            font-size: 1.5rem;
+        }
+
+        .penanggung-jawab {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 8px 15px;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            margin-left: 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        .penanggung-jawab i {
+            margin-right: 8px;
+            color: var(--accent);
+        }
+
+        .mobile-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav li {
+            margin-left: 25px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+            position: relative;
+            font-size: 1.05rem;
+        }
+
+        nav a:hover {
+            color: var(--accent);
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--accent);
+            transition: var(--transition);
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(44, 62, 80, 0.85), rgba(44, 62, 80, 0.9)), url('https://images.unsplash.com/photo-1612927601601-6638404737ce?ixlib=rb-4.0.3&auto=format&fit=crop&w=1800&q=80') no-repeat center center/cover;
+            color: white;
+            padding: 120px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, transparent 20%, var(--secondary) 150%);
+            z-index: 0;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.4rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--accent);
+            color: white;
+            padding: 14px 35px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            font-size: 1.1rem;
+            box-shadow: 0 5px 20px rgba(243, 156, 18, 0.3);
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 100%;
+            background: var(--primary-light);
+            transition: var(--transition);
+            z-index: -1;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(243, 156, 18, 0.4);
+        }
+
+        .btn:hover::before {
+            width: 100%;
+        }
+
+        /* Section Styles */
+        section {
+            padding: 100px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 70px;
+        }
+
+        .section-header h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.8rem;
+            color: var(--secondary);
+            margin-bottom: 20px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-header h2::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 5px;
+            background: var(--primary);
+            border-radius: 5px;
+        }
+
+        .section-header p {
+            max-width: 800px;
+            margin: 30px auto 0;
+            color: #666;
+            font-size: 1.15rem;
+        }
+
+        /* Brand Identity Section */
+        .brand-identity {
+            background-color: #fff;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .brand-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .brand-text h3 {
+            font-size: 2rem;
+            color: var(--secondary);
+            margin-bottom: 25px;
+            line-height: 1.3;
+        }
+
+        .brand-text p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .brand-image {
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            position: relative;
+        }
+
+        .brand-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: var(--transition);
+        }
+
+        .brand-image:hover img {
+            transform: scale(1.05);
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin: 30px 0;
+            box-shadow: var(--shadow);
+        }
+
+        .highlight-box h4 {
+            font-size: 1.6rem;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        .highlight-box h4 i {
+            margin-right: 15px;
+        }
+
+        /* Elements Section */
+        .elements-section {
+            background: linear-gradient(135deg, #f9f9f9 0%, #ffffff 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .elements-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 35px;
+            margin-top: 40px;
+        }
+
+        .element-card {
+            background: white;
+            border-radius: 20px;
+            padding: 35px 30px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border: 1px solid rgba(231, 76, 60, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .element-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .element-card i {
+            font-size: 3rem;
+            color: var(--primary);
+            margin-bottom: 25px;
+            display: block;
+            transition: var(--transition);
+        }
+
+        .element-card:hover i {
+            transform: scale(1.1);
+            color: var(--accent);
+        }
+
+        .element-card h3 {
+            font-size: 1.7rem;
+            margin-bottom: 20px;
+            color: var(--secondary);
+        }
+
+        /* Visual Identity Section */
+        .visual-section {
+            background: linear-gradient(135deg, var(--secondary) 0%, var(--primary) 100%);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .visual-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><polygon fill="rgba(255,255,255,0.03)" points="0,100 100,0 100,100"/></svg>');
+            background-size: cover;
+        }
+
+        .visual-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .visual-item {
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 20px;
+            padding: 35px 30px;
+            transition: var(--transition);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(5px);
+            text-align: center;
+        }
+
+        .visual-item:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.12);
+            border-color: rgba(255, 255, 255, 0.25);
+        }
+
+        .visual-item i {
+            font-size: 3.5rem;
+            color: var(--accent);
+            margin-bottom: 25px;
+            display: block;
+        }
+
+        .visual-item h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+
+        /* Consistency Section */
+        .consistency-section {
+            background-color: #fff;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .consistency-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .consistency-image {
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            position: relative;
+        }
+
+        .consistency-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: var(--transition);
+        }
+
+        .consistency-image:hover img {
+            transform: scale(1.05);
+        }
+
+        /* Awareness Section */
+        .awareness-section {
+            background: linear-gradient(135deg, #f9f9f9 0%, #ffffff 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .awareness-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .awareness-item {
+            background: white;
+            border-radius: 20px;
+            padding: 35px 30px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border: 1px solid rgba(231, 76, 60, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .awareness-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .awareness-item i {
+            font-size: 3rem;
+            color: var(--primary);
+            margin-bottom: 25px;
+            display: block;
+            transition: var(--transition);
+        }
+
+        .awareness-item:hover i {
+            transform: scale(1.1);
+            color: var(--accent);
+        }
+
+        .awareness-item h3 {
+            font-size: 1.7rem;
+            margin-bottom: 20px;
+            color: var(--secondary);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--secondary);
+            color: white;
+            padding: 80px 0 40px;
+            position: relative;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 50px;
+            margin-bottom: 50px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .footer-column h3 {
+            font-size: 1.6rem;
+            margin-bottom: 25px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .footer-column h3::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 50px;
+            height: 4px;
+            background: var(--primary);
+        }
+
+        .footer-column p {
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 15px;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+        }
+
+        .footer-links a i {
+            margin-right: 12px;
+            color: var(--accent);
+            width: 20px;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: var(--accent);
+            transform: translateX(5px);
+        }
+
+        .footer-links a:hover i {
+            color: var(--primary-light);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 40px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 1rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            animation: fadeIn 0.8s ease forwards;
+        }
+
+        .delay-1 {
+            animation-delay: 0.1s;
+        }
+
+        .delay-2 {
+            animation-delay: 0.2s;
+        }
+
+        .delay-3 {
+            animation-delay: 0.3s;
+        }
+
+        .delay-4 {
+            animation-delay: 0.4s;
+        }
+
+        .delay-5 {
+            animation-delay: 0.5s;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+
+            .section-header h2 {
+                font-size: 2.4rem;
+            }
+
+            .brand-content,
+            .consistency-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .brand-image,
+            .consistency-image {
+                order: -1;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .mobile-toggle {
+                display: block;
+            }
+
+            .penanggung-jawab {
+                display: none;
+            }
+
+            nav {
+                position: fixed;
+                top: 70px;
+                left: -100%;
+                width: 80%;
+                height: calc(100vh - 70px);
+                background: var(--secondary);
+                transition: var(--transition);
+                padding: 30px;
+                z-index: 1000;
+            }
+
+            nav.active {
+                left: 0;
+            }
+
+            nav ul {
+                flex-direction: column;
+            }
+
+            nav li {
+                margin: 20px 0;
+            }
+
+            .hero {
+                padding: 90px 0;
+            }
+
+            .hero h1 {
+                font-size: 2.4rem;
+            }
+
+            .section-header h2 {
+                font-size: 2rem;
+            }
+
+            section {
+                padding: 80px 0;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .section-header h2 {
+                font-size: 1.8rem;
+            }
+
+            .section-header p {
+                font-size: 1rem;
+            }
+
+            .btn {
+                padding: 12px 25px;
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header dengan Penanggung Jawab -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <i class="fas fa-bowl-food"></i>
+                BaksoBranding
+            </div>
+
+            <!-- Penanggung Jawab -->
+            <div class="penanggung-jawab">
+                <i class="fas fa-user-tie"></i>
+               <strong> Penanggung Jawab: Rizal & Farhan</strong>
+            </div>
+
+            <button class="mobile-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav>
+                <ul>
+                    <li><a href="#branding"><i class="fas fa-flag"></i> Brand Identity</a></li>
+                    <li><a href="#elements"><i class="fas fa-puzzle-piece"></i> Elemen Branding</a></li>
+                    <li><a href="#visual"><i class="fas fa-paint-brush"></i> Identitas Visual</a></li>
+                    <li><a href="#awareness"><i class="fas fa-bullhorn"></i> Brand Awareness</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Branding untuk Usaha Bakso Anda</h1>
+                <p>Menciptakan Identitas yang Tak Terlupakan</p>
+                <a href="#branding" class="btn fade-in">Pelajari Strategi</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Brand Identity Section -->
+    <section id="branding" class="brand-identity">
+        <div class="container">
+            <div class="brand-content fade-in">
+                <div class="brand-text">
+                    <h3>Membangun Identitas Brand Bakso</h3>
+                    <p>Membangun branding yang kuat akan membuat bakso Anda lebih dari sekadar makanan enak; ia akan
+                        menjadi pengalaman yang diingat dan dicari.</p>
+                    <p>Ini yang membedakan Anda dari kompetitor dan membangun loyalitas pelanggan jangka panjang.</p>
+
+                    <div class="highlight-box fade-in delay-1">
+                        <h4><i class="fas fa-lightbulb"></i> Branding Bukan Sekedar Logo</h4>
+                        <p>Branding adalah tentang siapa Anda, apa yang Anda tawarkan, dan bagaimana Anda ingin
+                            dipersepsikan oleh pelanggan. Ini mencakup nilai-nilai, janji, dan pengalaman yang Anda
+                            berikan.</p>
+                    </div>
+                </div>
+
+                <div class="brand-image fade-in delay-2">
+                    <img src="https://images.unsplash.com/photo-1594041680534-e8c8cdebd659?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                        alt="Brand Identity">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Elements Section -->
+    <section id="elements" class="elements-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Elemen Penting Branding Bakso</h2>
+                <p>Setiap brand yang sukses dibangun di atas fondasi yang kuat dari elemen-elemen penting berikut:</p>
+            </div>
+
+            <div class="elements-grid">
+                <div class="element-card fade-in">
+                    <i class="fas fa-bullseye"></i>
+                    <h3>Visi & Misi Brand</h3>
+                    <p>Tentukan tujuan jangka panjang (visi) dan bagaimana Anda mencapainya (misi). Contoh: "Menjadi
+                        kedai bakso favorit keluarga di Palu" dan "Menyajikan bakso sapi premium dengan kuah kaldu
+                        otentik".</p>
+                </div>
+
+                <div class="element-card fade-in delay-1">
+                    <i class="fas fa-star"></i>
+                    <h3>Nilai-nilai Brand</h3>
+                    <p>Prinsip yang Anda pegang. Contoh: Kualitas Tinggi (bahan segar), Kebersihan (higienis), Keramahan
+                        (pelayanan tulus), Keotentikan (rasa asli tanpa pengawet).</p>
+                </div>
+
+                <div class="element-card fade-in delay-2">
+                    <i class="fas fa-handshake"></i>
+                    <h3>Janji Brand</h3>
+                    <p>Apa yang selalu pelanggan dapatkan? Contoh: "Setiap mangkuk Bakso [Nama Brand] menjanjikan
+                        kelezatan sejati, dibuat dengan hati, dan disajikan dengan senyum tulus."</p>
+                </div>
+
+                <div class="element-card fade-in delay-3">
+                    <i class="fas fa-users"></i>
+                    <h3>Target Audiens</h3>
+                    <p>Siapa yang ingin Anda layani? Keluarga, pekerja, atau semua kalangan? Ini akan memengaruhi semua
+                        keputusan branding Anda.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Visual Identity Section -->
+    <section id="visual" class="visual-section">
+        <div class="container">
+            <div class="section-header" style="color: white;">
+                <h2>Mendesain Identitas Visual Brand</h2>
+                <p>Ini adalah "wajah" bisnis Anda yang akan langsung dilihat pelanggan</p>
+            </div>
+
+            <div class="visual-grid">
+                <div class="visual-item fade-in">
+                    <i class="fas fa-signature"></i>
+                    <h3>Nama Brand</h3>
+                    <p>Pilih yang mudah diingat, unik, dan sedikit relevan dengan bakso atau nuansa kuliner. Pastikan
+                        belum digunakan.</p>
+                </div>
+
+                <div class="visual-item fade-in delay-1">
+                    <i class="fas fa-palette"></i>
+                    <h3>Logo</h3>
+                    <p>Desain harus sederhana, mudah dikenali, dan fleksibel. Pilih palet warna yang membangkitkan
+                        selera.</p>
+                </div>
+
+                <div class="visual-item fade-in delay-2">
+                    <i class="fas fa-quote-right"></i>
+                    <h3>Slogan (Tagline)</h3>
+                    <p>Buat yang singkat, padat, dan menggambarkan keunggulan Anda. Contoh: "Bakso Rasa Juara, Bikin
+                        Nagih!"</p>
+                </div>
+
+                <div class="visual-item fade-in delay-3">
+                    <i class="fas fa-tshirt"></i>
+                    <h3>Seragam Karyawan</h3>
+                    <p>Bersih dan berlogo untuk kesan profesional dan identitas brand yang kuat.</p>
+                </div>
+
+                <div class="visual-item fade-in delay-4">
+                    <i class="fas fa-box-open"></i>
+                    <h3>Kemasan Takeaway</h3>
+                    <p>Desain menarik dengan logo dan info kontak, praktis, dan food-grade untuk menjaga kualitas.</p>
+                </div>
+
+                <div class="visual-item fade-in delay-5">
+                    <i class="fas fa-sign"></i>
+                    <h3>Papan Nama</h3>
+                    <p>Terlihat jelas dari jalan dan konsisten dengan desain logo untuk pengenalan brand yang kuat.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Consistency Section -->
+    <section class="consistency-section">
+        <div class="container">
+            <div class="consistency-content fade-in">
+                <div class="consistency-image fade-in delay-1">
+                   <img src="Image/bento_bg.png" alt="BBM-Bakso Bento Malang">
+                </div>
+
+                <div class="brand-text">
+                    <h3>Konsistensi Branding di Setiap Titik Sentuh</h3>
+                    <p>Branding harus terlihat dan terasa sama di semua interaksi pelanggan dengan bisnis Anda:</p>
+
+                    <div class="strategy-points">
+                        <ul>
+                            <li><i class="fas fa-check-circle"></i> <strong>Pengalaman di Kedai</strong>: Kebersihan
+                                mutlak, suasana nyaman, dan pelayanan ramah</li>
+                            <li><i class="fas fa-check-circle"></i> <strong>Produk</strong>: Konsistensi rasa bakso dan
+                                kuah, penyajian yang menarik</li>
+                            <li><i class="fas fa-check-circle"></i> <strong>Kehadiran Digital</strong>: Konsistensi
+                                logo, warna, dan gaya bahasa di media sosial</li>
+                            <li><i class="fas fa-check-circle"></i> <strong>Komunikasi Pemasaran</strong>: Setiap
+                                promosi harus mencerminkan citra brand Anda</li>
+                        </ul>
+                    </div>
+
+                    <div class="highlight-box fade-in delay-2" style="background: var(--secondary);">
+                        <h4><i class="fas fa-key"></i> Kunci Sukses: Konsistensi</h4>
+                        <p>Semua elemen brand Anda harus saling mendukung dan disampaikan secara konsisten untuk
+                            membangun kepercayaan dan loyalitas pelanggan yang langgeng.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Awareness Section -->
+    <section id="awareness" class="awareness-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Membangun Brand Awareness dan Loyalitas</h2>
+                <p>Strategi efektif untuk memperkuat pengenalan merek dan menciptakan pelanggan setia</p>
+            </div>
+
+            <div class="awareness-grid">
+                <div class="awareness-item fade-in">
+                    <i class="fas fa-comments"></i>
+                    <h3>Word-of-Mouth</h3>
+                    <p>Berikan pengalaman pelanggan yang luar biasa (rasa enak, pelayanan ramah, tempat bersih) agar
+                        mereka merekomendasikan Anda secara alami.</p>
+                </div>
+
+                <div class="awareness-item fade-in delay-1">
+                    <i class="fas fa-calendar-alt"></i>
+                    <h3>Promo & Event Lokal</h3>
+                    <p>Manfaatkan diskon grand opening atau ikut serta di bazar/festival kuliner di Palu untuk
+                        memperkenalkan brand.</p>
+                </div>
+
+                <div class="awareness-item fade-in delay-2">
+                    <i class="fas fa-id-card"></i>
+                    <h3>Program Loyalitas</h3>
+                    <p>Berikan kartu stamp (beli 10 gratis 1) atau diskon khusus untuk pelanggan setia sebagai bentuk
+                        apresiasi.</p>
+                </div>
+
+                <div class="awareness-item fade-in delay-3">
+                    <i class="fas fa-star"></i>
+                    <h3>Ulasan Online</h3>
+                    <p>Dorong pelanggan untuk memberikan ulasan di Google Maps dan tanggapi dengan profesional untuk
+                        membangun kepercayaan.</p>
+                </div>
+
+                <div class="awareness-item fade-in delay-4">
+                    <i class="fas fa-handshake"></i>
+                    <h3>Kolaborasi</h3>
+                    <p>Bekerjasama dengan influencer mikro lokal di Palu atau bisnis UMKM lain untuk memperluas
+                        jangkauan.</p>
+                </div>
+
+                <div class="awareness-item fade-in delay-5">
+                    <i class="fas fa-book"></i>
+                    <h3>Cerita Brand</h3>
+                    <p>Bagikan kisah di balik bakso Anda (resep keluarga, bahan khusus) untuk menciptakan ikatan
+                        emosional dengan pelanggan.</p>
+                </div>
+            </div>
+
+            <div class="highlight-box" style="margin-top: 50px; background: var(--accent);">
+                <h4><i class="fas fa-crown"></i> Keuntungan Branding Kuat</h4>
+                <p>Branding yang kuat tidak hanya meningkatkan pengenalan merek tetapi juga memungkinkan Anda menjual
+                    dengan harga premium karena nilai yang dirasakan pelanggan terhadap produk Anda.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>BaksoBranding</h3>
+                    <p>Platform strategi branding modern untuk bisnis bakso yang ingin membangun identitas kuat di
+                        pasar.</p>
+                    <p style="margin-top: 15px;"><i class="fas fa-map-marker-alt"></i> Jl. Branding No. 123, Palu</p>
+                    <p><i class="fas fa-phone"></i> +62 812 3456 7890</p>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Penanggung Jawab</h3>
+                    <ul class="footer-links">
+                        <li><a href="#"><i class="fas fa-user"></i> Rizal - Strategi Branding</a></li>
+                        <li><a href="#"><i class="fas fa-user"></i> Farhan - Desain Identitas</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Kontak Kami</h3>
+                    <ul class="footer-links">
+                        <li><a href="#"><i class="fas fa-envelope"></i> info@baksobranding.id</a></li>
+                        <li><a href="#"><i class="fab fa-instagram"></i> @baksobranding</a></li>
+                        <li><a href="#"><i class="fab fa-facebook"></i> BaksoBranding</a></li>
+                        <li><a href="#"><i class="fab fa-tiktok"></i> @baksobranding</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="copyright">
+                <p>&copy; 2025 BaksoBranding.id - All Rights Reserved. Membangun identitas brand bakso yang tak
+                    terlupakan</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Navigation Toggle
+        const mobileToggle = document.querySelector('.mobile-toggle');
+        const nav = document.querySelector('nav');
+
+        mobileToggle.addEventListener('click', () => {
+            nav.classList.toggle('active');
+        });
+
+        // Smooth Scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                nav.classList.remove('active');
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Header Shadow on Scroll
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.style.boxShadow = '0 5px 25px rgba(0, 0, 0, 0.2)';
+            } else {
+                header.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.08)';
+            }
+        });
+
+        // Animation on Scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+        document.querySelectorAll('.brand-content, .element-card, .visual-item, .awareness-item, .highlight-box').forEach(element => {
+            observer.observe(element);
+        });
+    </script>
+</body>
+
+</html>
